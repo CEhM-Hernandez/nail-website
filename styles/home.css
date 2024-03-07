@@ -1,0 +1,15 @@
+/* ---------------------------- principal banner ---------------------------- */
+
+.logoBanner {
+    height: calc(100vh - 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.logoBanner img {
+    max-width: 35%;
+    padding: 3%;
+}

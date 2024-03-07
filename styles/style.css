@@ -1,0 +1,162 @@
+/* ---------------------------- baisis ---------------------------- */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #ffeff2;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*  ---------------------------- pincipal page ---------------------------- */
+
+.main {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+}
+
+.section {
+	padding-top: 80px;
+}
+
+.section .card {
+	padding: 2.5rem;
+	border-radius: 5px;
+
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(230.4px, 1fr));
+	grid-gap: 1rem;
+
+	overflow: hidden;
+	background: #ffffffe6;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.section-title {
+	grid-column: 1 / -1;
+	margin-top: 0;
+	margin-bottom: 1rem;
+
+	text-align: center;
+	font-size: 3rem;
+}
+
+/*  ---------------------------- product images ---------------------------- */
+
+.image-container {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 6px;
+}
+
+.image-container:hover .product-image {
+	filter: blur(1.2px);
+	transform: scale(1.2);
+}
+
+.product-image {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	transition: .5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------- media querys ---------------------------- */
+
+@media screen and (max-width: 800px) {
+	.logoBanner img {
+		max-width: 60%;
+	}
+
+	.menu a {
+		padding: 5px;
+		font-size: 14px;
+	}
+
+	#button-5 {
+		padding: 0px;
+	}
+
+	.section .card {
+		padding: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.menu {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: "button1 button2 button3 button4";
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	.logoBanner {
+		height: calc(100vh - 4rem);
+	}
+
+	.menu {
+		height: 4rem;
+	}
+
+	.menu a {
+		font-size: 12px;
+	}
+
+	.main {
+		grid-template-columns: .5fr 4fr .5fr;
+	}
+
+	.section .card {
+		grid-template-columns: repeat(auto-fit, minmax(153.6px, 1fr));
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	@media screen and (max-width: 350px) {
+		.logoBanner {
+			height: calc(100vh - 3rem);
+		}
+
+		.menu {
+			height: 3rem;
+		}
+
+		.menu a {
+			font-size: 9px;
+		}
+
+		.menu .indicator {
+			height: 5px;
+		}
+	}
+}

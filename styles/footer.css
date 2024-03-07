@@ -1,0 +1,131 @@
+/* ---------------------------- footer ---------------------------- */
+
+.footer {
+    width: 100%;
+    margin-top: 5%;
+
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 20px;
+}
+
+/* ---------------------------- structure ---------------------------- */
+
+.footer .footer-content {
+    width: 80%;
+    max-width: 1200px;
+    padding: 3rem 0px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.footer .footer-content .box figure {
+    width: 12.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 100%;
+}
+
+.footer .footer-content .box h2 {
+    margin-bottom: 2rem;
+
+    text-align: center;
+    text-wrap: nowrap;
+    font-size: 2rem;
+    color: #ffbdca;
+}
+
+.about-us-txt p {
+    margin: 0px 0px 1.5rem 0px;
+
+    text-align: center;
+    font-size: 1.1rem;
+    color: #3B2840;
+}
+
+/* ---------------------------- hypertext footer hover effect ---------------------------- */
+
+.footer .footer-content .box p a {
+    position: relative;
+
+    font-size: 1.1rem;
+    color: #ffbdca;
+}
+
+.about-us-txt a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    border-radius: 5px;
+
+    background-color: #ffbdca;
+
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.about-us-txt a:hover::before {
+
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* ---------------------------- social icons ---------------------------- */
+
+.box .social-media {
+    text-wrap: nowrap;
+}
+
+.box .social-media a {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+
+    font-size: x-large;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffbdca;
+
+    transition: all .3s ease-in-out;
+}
+
+.box .social-media a:hover {
+    color: #e389aa;
+}
+
+.footer .end-page {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+    background-color: #ffbdca;
+}
+
+.footer .end-page small {
+    font-size: 1rem;
+}
+
+@media screen and (width > 800px) {
+    .footer .footer-content {
+        width: 100%;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+    }
+}

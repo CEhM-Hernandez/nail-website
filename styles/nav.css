@@ -1,0 +1,67 @@
+/* ---------------------------- nav menu ---------------------------- */
+
+.menu {
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "empty-left button1 button2 button3 button4 empty-rigth";
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 5rem;
+
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* ---------------------------- nav buttons ---------------------------- */
+
+.button {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+
+    transition: .2s ease-in-out all;
+}
+
+#button-1 {
+    grid-area: button1;
+}
+
+#button-2 {
+    grid-area: button2;
+}
+
+#button-3 {
+    grid-area: button3;
+}
+
+#button-4 {
+    grid-area: button4;
+}
+
+.menu a:hover {
+    background: #ffeff2;
+}
+
+/* ---------------------------- lower indicator ---------------------------- */
+
+.menu .indicator {
+    width: 0px;
+    height: 7px;
+    position: absolute;
+    bottom: 0;
+
+    background: #ffbdca;
+
+    transition: .3s ease-out all;
+}
